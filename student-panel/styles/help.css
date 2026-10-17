@@ -1,0 +1,209 @@
+/* ===== Help Page ===== */
+
+.h-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
+
+.h-card-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.h-card-title {
+  text-align: center;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.h-card-description {
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.h-form-group {
+  margin-bottom: 1.5rem;
+}
+
+.h-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.h-info-text {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+
+.h-cancel-btn {
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.5rem;
+  border: 1px solid #000000;
+  background-color: #ffffff;
+  color: #6b7280;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.h-cancel-btn:hover {
+  background-color: #f9fafb;
+  color: #374151;
+}
+
+.h-submit-btn {
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #2563eb;
+  color: #ffffff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.h-submit-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.h-submit-icon {
+  font-size: 1.125rem;
+}
+
+/* Header */
+
+.h-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.h-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.01em;
+}
+
+.h-subtitle {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+/* Card */
+
+.h-card {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+  overflow: hidden;
+}
+
+.h-card-inner {
+  padding: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .h-card-inner {
+    padding: 2rem;
+  }
+}
+
+/* Form */
+
+.h-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.h-select {
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid #000000;
+  background-color: #f8fafc;
+  font-size: 0.875rem;
+  padding: 0.6rem 0.75rem;
+  color: #111827;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+.h-select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.3);
+  background-color: #ffffff;
+}
+
+/* Textarea */
+
+.h-textarea {
+  width: 100%;
+  min-height: 12rem;
+  border-radius: 0.75rem;
+  border: 1px solid #000000;
+  background-color: #f8fafc;
+  font-size: 0.875rem;
+  padding: 0.9rem;
+  color: #111827;
+  outline: none;
+  resize: none;
+  font-family: inherit;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+.h-textarea::placeholder {
+  color: #9ca3af;
+}
+
+.h-textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.3);
+  background-color: #ffffff;
+}
+
+.h-char-count {
+  font-size: 0.7rem;
+  color: #9ca3af;
+  text-align: right;
+}
+
+.h-info-icon {
+  font-size: 14px;
+}
+
+/* Buttons */
+
+.h-buttons {
+  display: flex;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .h-buttons {
+    width: auto;
+  }
+}
+
+

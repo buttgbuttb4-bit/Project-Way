@@ -1,0 +1,316 @@
+/* ===== Main App Layout ===== */
+
+.app-root {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #f9fafb;
+}
+
+.app-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.app-mobile-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: white;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.app-brand {
+  display: flex;
+  align-items: center;
+}
+
+.app-brand-text {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.app-mobile-menu-btn {
+  padding: 0.5rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  color: #6b7280;
+}
+
+.app-mobile-menu-btn:hover {
+  background-color: #f3f4f6;
+}
+
+.app-content {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+  min-height: 0;
+}
+
+/* Mobile responsive */
+@media (min-width: 1024px) {
+  .app-mobile-header {
+    display: none;
+  }
+}
+
+/* ===== Sidebar overlay (mobile) ===== */
+
+.sb-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+}
+
+/* ===== Sidebar base ===== */
+
+.sb-aside {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 30;
+  width: 18rem; /* 72 */
+  background-color: #2563eb;
+  border-right: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+  transform: translateX(-100%);
+}
+
+.sb-aside-open {
+  transform: translateX(0);
+}
+
+.sb-aside-closed {
+  transform: translateX(-100%);
+}
+
+/* Desktop behavior: always visible */
+
+@media (min-width: 1024px) {
+  .sb-aside {
+    position: static;
+    transform: translateX(0);
+  }
+}
+
+/* ===== Sidebar header (logo + title) ===== */
+
+.sb-header {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.sb-user-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.sb-user-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sb-user-initial {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: white;
+}
+
+.sb-user-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.sb-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+  margin: 0 0 0.25rem 0;
+}
+
+.sb-user-name {
+  font-size: 0.875rem;
+  color: #ffffff;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sb-logout-btn {
+  margin: 1rem auto;
+  padding: 0.5rem 0.75rem;
+  border: none;
+  background: #dc2626;
+  color: white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  flex-shrink: 0;
+  width: 90%;
+}
+
+.sb-logout-btn-text {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.sb-logout-btn:hover {
+  background: #b91c1c;
+  transform: translateY(-1px);
+}
+
+/* ===== Navigation ===== */
+
+.sb-nav {
+  flex: 1;
+  padding: 1rem;
+  padding-top: 0.5rem;
+  overflow-y: auto;
+}
+
+/* Nav item */
+
+.sb-nav-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.sb-nav-item-inactive {
+  color: #ffffff;
+}
+
+.sb-nav-item-inactive:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.sb-nav-item-active {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.sb-nav-item-icon {
+  font-size: 20px;
+}
+
+.sb-nav-item-icon-filled {
+  font-variation-settings: 'FILL' 1;
+}
+
+.sb-nav-item-label {
+  font-size: 0.875rem;
+}
+
+/* ===== Project section ===== */
+
+.sb-project-section {
+  padding-top: 1rem;
+  margin-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.sb-project-heading {
+  padding: 0 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #ffffff;
+}
+
+.sb-project-link {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #ffffff;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.sb-project-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.sb-project-label {
+  font-size: 0.875rem;
+}
+
+/* ===== Back button ===== */
+
+.sb-back-wrapper {
+  margin-bottom: 0.5rem;
+  padding: 0 1rem;
+}
+
+.sb-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  color: #ffffff;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.sb-back-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.sb-back-icon {
+  font-size: 14px;
+}
+
+/* ===== Sidebar footer (user info) ===== */
+
+/* User footer removed */

@@ -1,0 +1,171 @@
+/* Layout Component Styles */
+
+/* Root layout */
+.admin-layout {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: #f5f7fb; /* light background */
+}
+
+/* Dark mode support (if you are toggling a .dark class on body/html) */
+.dark .admin-layout {
+  background-color: #020617; /* approx bg-background-dark */
+}
+
+/* Mobile sidebar overlay */
+.admin-sidebar-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 15;
+}
+
+@media (max-width: 767px) {
+  .admin-sidebar-overlay {
+    display: block;
+  }
+}
+
+/* Right side main container */
+.admin-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+/* Header */
+.admin-header {
+  height: 64px; /* h-16 */
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0; /* slate-200 */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px; /* px-6 */
+  z-index: 10;
+  flex-shrink: 0;
+}
+
+.dark .admin-header {
+  background-color: #1a2632;
+  border-bottom-color: #1e293b; /* slate-800 */
+}
+
+/* Mobile menu button */
+.admin-menu-toggle {
+  padding: 8px;
+  color: #475569; /* slate-600 */
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Hide menu button on medium+ screens (approx) */
+@media (min-width: 768px) {
+  .admin-menu-toggle {
+    display: none;
+  }
+}
+
+.dark .admin-menu-toggle {
+  color: #cbd5f5; /* slate-300-ish */
+}
+
+/* Spacer between left and right header content */
+.admin-header-spacer {
+  flex: 1;
+}
+
+/* Right actions wrapper */
+.admin-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px; /* gap-4 */
+}
+
+/* Notification button */
+.admin-notification-button {
+  position: relative;
+  padding: 8px;
+  color: #64748b; /* slate-500 */
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 9999px;
+  transition: color 150ms ease, background-color 150ms ease;
+}
+
+.admin-notification-button:hover {
+  color: #2563eb; /* primary-ish */
+  background-color: #f8fafc; /* slate-50 */
+}
+
+.dark .admin-notification-button:hover {
+  background-color: #1e293b; /* slate-800 */
+}
+
+.dark .admin-notification-button {
+  color: #e2e8f0; /* slate-300 */
+}
+
+/* Red dot on notification */
+.admin-notification-dot {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 8px;
+  height: 8px;
+  background-color: #ef4444; /* red-500 */
+  border-radius: 9999px;
+  border: 2px solid #ffffff;
+}
+
+.dark .admin-notification-dot {
+  border-color: #1a2632;
+}
+
+/* Main scroll area */
+.admin-content {
+  flex: 1;
+  overflow-y: auto;
+  background-color: #f5f7fb;
+  padding: 24px; /* p-6 */
+  width: 100%;
+}
+
+/* Larger padding on md+ */
+@media (min-width: 768px) {
+  .admin-content {
+    padding: 32px; /* md:p-8 */
+  }
+}
+
+.dark .admin-content {
+  background-color: #020617;
+}
+
+/* Inner container (max width & center) */
+.admin-content-inner {
+  max-width: 1120px; /* approx max-w-7xl */
+  margin: 0 auto;
+  height: 100%;
+}
+
+/* Optional: hide scrollbar class if you used no-scrollbar */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}

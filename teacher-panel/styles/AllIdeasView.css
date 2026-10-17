@@ -1,0 +1,261 @@
+/* All Ideas View */
+.i-page {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  height: 100%;
+}
+
+.i-head {
+  display: flex;
+  flex-direction: column;
+  gap: 0.0625rem;
+}
+
+.i-title {
+  font-size: 1.875rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: #0f172a;
+}
+
+.i-subtitle {
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+/* Tabs */
+.i-tabsWrap {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.i-tabs {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+}
+
+.i-tab {
+  white-space: nowrap;
+  padding: 0.75rem 0.125rem;
+  border: none;
+  border-bottom: 2px solid transparent;
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: none;
+  color: #64748b;
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.i-tab:hover {
+  color: #334155;
+  border-bottom-color: #cbd5f5;
+}
+
+.i-tabActive {
+  border-bottom-color: #2563eb;
+  color: #2563eb;
+}
+
+.i-tabIcon {
+  font-size: 20px;
+}
+
+.i-tabBadge {
+  margin-left: 0.25rem;
+  padding: 0.0625rem 0.375rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  display: inline-block;
+}
+
+.i-tabBlue {
+  background-color: #dbeafe;
+  color: #2563eb;
+}
+
+.i-tabGray {
+  background-color: #f1f5f9;
+  color: #475569;
+}
+
+.i-tabOrange {
+  background-color: #ffedd5;
+  color: #b45309;
+}
+
+.i-tabPurple {
+  background-color: #f3e8ff;
+  color: #7c3aed;
+}
+
+/* Card */
+.i-card {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+  overflow: hidden;
+}
+
+.i-cardHead {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  background-color: #f8fafc;
+}
+
+.i-cardLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.i-cardTitle {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* Status icon colors */
+.i-icon {
+  font-size: 20px;
+}
+
+.i-iconAccept {
+  color: #16a339;
+}
+
+.i-iconReject {
+  color: #dc2626;
+}
+
+.i-iconDefault {
+  color: #475569;
+}
+
+/* Table */
+.i-tableWrap {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.i-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.i-tableHead {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.i-th {
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #64748b;
+  background-color: #f8fafc;
+}
+
+.i-thDesc {
+  width: 33.3333%;
+}
+
+.i-thRight {
+  text-align: right;
+}
+
+.i-row {
+  border-bottom: 1px solid #f1f5f9;
+  transition: background-color 0.15s ease;
+}
+
+.i-row:hover {
+  background-color: #f8fafc;
+}
+
+.i-cell {
+  padding: 0.625rem 1rem;
+  font-size: 0.875rem;
+  color: #0f172a;
+}
+
+.i-titleCell {
+  font-weight: 500;
+}
+
+.i-descrCell {
+  font-size: 0.75rem;
+  color: #64748b;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.i-sessionCell {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.i-rightCell {
+  text-align: right;
+}
+
+/* Status pills for ideas */
+.i-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.125rem 0.625rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.i-pillAccept {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.i-pillReject {
+  background-color: #fef2f2;
+  color: #991b1b;
+}
+
+.i-pillPending {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+/* Footer */
+.i-footer {
+  padding: 0.75rem 1rem;
+  border-top: 1px solid #e2e8f0;
+  background-color: #f8fafc;
+}
+
+.i-footerText {
+  font-size: 0.75rem;
+  color: #64748b;
+  margin: 0;
+}
+
+/* Empty state */
+.i-empty {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.875rem;
+  color: #64748b;
+}

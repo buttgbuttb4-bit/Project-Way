@@ -1,0 +1,170 @@
+/* ===== Feedback Page ===== */
+.fd-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.fb-header {
+  margin-bottom: 1.5rem;
+}
+
+.fb-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.fb-subtitle {
+  color: #6b7280;
+}
+
+.fb-filter {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.fb-filter-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb;
+  background-color: #f9fafb;
+  color: #4b5563;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.fb-filter-btn:hover {
+  background-color: #e5e7eb;
+}
+
+.fb-filter-btn.active {
+  background-color: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+}
+
+.fb-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Empty State */
+.fd-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  text-align: center;
+  background-color: #f9fafb;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+}
+
+.fd-empty-icon {
+  font-size: 3rem;
+  color: #9ca3af;
+  margin-bottom: 1rem;
+}
+
+.fd-empty-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.fd-empty-subtitle {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+/* Project Info */
+.fd-project-info {
+  background-color: #f3f4f6;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+.fd-card {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+  min-width: 0;     
+  overflow: hidden;
+}
+
+.fd-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.fd-status-tag {
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.fd-status-pending {
+  background-color: #fffbeb;
+  color: #d97706;
+}
+
+.fd-status-accepted {
+  background-color: #ecfdf5;
+  color: #059669;
+}
+
+.fd-status-rejected {
+  background-color: #fef2f2;
+  color: #ef4444;
+}
+
+
+.fd-new-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background-color: #ef4444;
+  color: #ffffff;
+ 
+}
+
+.fd-message {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: #374151;
+  overflow-wrap: break-word;   
+  word-break: break-word;      
+  white-space: normal; 
+}
+
+.fd-reply {
+  margin-top: 10px;
+  background-color: #f0f9ff;
+  padding: 10px;
+  border-radius: 5px;
+  overflow-wrap: break-word;   
+  word-break: break-word;      
+  white-space: normal; 
+}
+
+.fd-timestamp {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
